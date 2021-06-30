@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body class="h-screen v-screen bg-white font-roboto">
+        <header class="p-3 bg-blue-500">
+            <p class="inline-block text-3xl font-bold"><span class="text-yellow-500">DIGI</span>DUGOUT</p>
+        </header>
+
+        <div id="calendar-button" class="absolute bottom-5 right-5 rounded-full bg-blue-500 p-1 shadow-calendar">
+            <div class="my-2 mx-3">
+                <div class="text-center bg-red-500 rounded-t-lg px-2 py-1 font-bold text-white text-xs">SEPT</div>
+                <div class="text-center bg-gray-100 font-bold py-1 text-sm rounded-b-lg">30</div>
+            </div>
+        </div>
+
+        <div id="calendar-menu" class="absolute bottom-28 left-1/2 transform -translate-x-1/2 w-screen bg-white transition duration-300 ease-in-out h-1/2">
+            <div id="calendar-inner" class="border-2 h-full mx-5">
+                <div id="year-month" class="flex text-md">
+                    <p class="text-center">YEAR</p>
+                    <select id="selectYear"></select>
+                </div>
+                <div id="calendar-right" class="w-full text-center h-full flex flex-col justify-between">
+                    <div id="day-headings" class="flex justify-around text-black text-sm">
+                        <p id="sun" class="">SUN</p>
+                        <p id="mon" class="">MON</p>
+                        <p id="tue" class="">TUE</p>
+                        <p id="wed" class="">WED</p>
+                        <p id="thu" class="">THU</p>
+                        <p id="fri" class="">FRI</p>
+                        <p id="sat" class="">SAT</p>
+                    </div>
+                    <div id="days" class="text-xl font-bold h-full grid grid-cols-7 grid-rows-5">
+                        <div id="sun-1" class="flex justify-center items-center">1</div>
+                        <div id="sun-1" class="flex justify-center items-center">2</div>
+                        <div id="sun-1" class="flex justify-center items-center">3</div>
+                        <div id="sun-1" class="flex justify-center items-center">4</div>
+                        <div id="sun-1" class="flex justify-center items-center">5</div>
+                        <div id="sun-1" class="flex justify-center items-center">6</div>
+                        <div id="sun-1" class="flex justify-center items-center">7</div>                            
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">8</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">9</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">10</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">11</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">12</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">13</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">14</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">15</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">16</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">17</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">18</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">19</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">20</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">21</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">22</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">23</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">24</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">25</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">26</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">27</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">28</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">29</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">30</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black">31</div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black"></div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black"></div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black"></div>
+                        <div id="sun-1" class="flex justify-center items-center border-t-2 border-black"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
