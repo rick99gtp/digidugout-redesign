@@ -1,12 +1,18 @@
 const calendarButton = document.getElementById('calendar-button');
 const selectYear = document.getElementById('selectYear')
 const calendarMenu = document.getElementById('calendar-menu');
+const calendarIcon = document.getElementById('calendar-icon');
+const xIcon = document.getElementById('x-icon');
+
+let calendarVisible = false;
 
 calendarButton.addEventListener('click', function() {
-    this.style.animation = 'cScale .3s ease-in-out forwards';
-});
+    calendarIcon.classList.toggle('opacity-0');
+    xIcon.classList.toggle('opacity-0');
 
-calendarButton.addEventListener('animationend', () => {
-    // calendarMenu.style.transform = "translateY(-100%)";
-    calendarMenu.style.animation = "showCalendar .3s ease-in-out forwards";
+    calendarVisible = !calendarVisible;
+
+    // show the menu
+    calendarMenu.classList.toggle('-bottom-96');
+    // calendarMenu.style.bottom='8rem';
 });
