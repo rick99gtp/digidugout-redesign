@@ -11,31 +11,49 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
-    <body class="h-screen v-screen bg-white font-roboto bg-home-plate bg-cover bg-center bg-no-repeat overflow-y-hidden">
-        <header class="p-3 bg-white">
-            <p class="inline-block text-3xl font-bold"><span class="text-yellow-500">DIGI</span>DUGOUT</p>
+    <body class="h-screen v-screen bg-home-plate bg-center bg-cover bg-no-repeat font-roboto overflow-y-hidden">
+        <header class="p-3 bg-blue-500">
+            <p class="inline-block text-2xl font-bold text-white"><span class="text-yellow-500">DIGI</span>DUGOUT</p>
         </header>
 
         <div id="calendar-button" class="absolute bottom-5 left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500
-                                transition duration-300 flex justify-center items-center p-2">
-            <div id="calendar-icon" class="my-2 mx-3 transition duration-300">
-                <div class="text-center bg-red-500 rounded-t-lg px-2 py-1 font-bold text-white text-xs">SEPT</div>
-                <div class="text-center bg-gray-100 font-bold py-1 text-sm rounded-b-lg">30</div>
+                                transition duration-300 flex justify-center items-center w-20 h-20">
+            <div id="calendar-icon" class="transition duration-300">
+                <div class="text-center bg-red-500 rounded-t-lg px-2 py-1 font-bold text-white text-xs">JULY</div>
+                <div id="calendar-icon-day" class="text-center bg-gray-100 font-bold py-1 text-sm rounded-b-lg">2</div>
             </div>
-            <div id="x-icon" class="w-full h-full absolute flex justify-center items-center opacity-0 text-6xl text-white transform rotate-45">+</div>
+            <div id="x-icon" class="w-full h-full absolute flex justify-center items-center transition duration-300 opacity-0 text-6xl text-white transform rotate-45">+</div>
         </div>
 
-        <div id="calendar-menu" class="rounded-3xl absolute bottom-32 -bottom-96 left-1/2 transform -translate-x-1/2 w-11/12
-                                    bg-white transition duration-300 ease-in-out
+        <div id="month-list" class="absolute transition duration-300 transform -translate-x-full top-0 bottom-0 bg-white text-white flex items-center w-1/2 rounded-r-lg z-10">
+            <ul class="text-2xl text-center w-full ">
+                <li class="flex justify-center my-2"><div class="month border border-blue-500 text-blue-500 py-2 rounded-lg w-11/12">MARCH</div></li>
+                <li class="flex justify-center"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">APRIL</div></li>
+                <li class="flex justify-center my-2"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">MAY</div></li>
+                <li class="flex justify-center"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">JUNE</div></li>
+                <li class="flex justify-center my-2"><div class="active-month month border border-blue-500 text-blue-500  py-2 rounded-lgd w-11/12">JULY</div></li>
+                <li class="flex justify-center"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">AUGUST</div></li>
+                <li class="flex justify-center my-2"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">SEPTEMBER</div></li>
+                <li class="flex justify-center"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">OCTOBER</div></li>
+                <li class="flex justify-center my-2"><div class="month border border-blue-500 text-blue-500  py-2 rounded-lg w-11/12">NOVEMBER</div></li>
+            </ul>
+        </div>
+
+        <div id="calendar-menu" class="opacity-0 -bottom-90 rounded-3xl absolute left-1/2 transform -translate-x-1/2 w-11/12
+                                    bg-blue-500 transition duration-300 ease-in-out
                                     before:absolute before:w-0 before:h-0 before:content-['']
                                     before:border-solid before:border-t-20 before:border-r-20 before:border-l-20
                                     before:border-l-transparent before:border-r-transparent before:border-t-white
                                     before:-bottom-4 before:left-1/2 before:transform before:-translate-x-1/2">
-            <div id="year-month" class="flex text-md rounded-t-3xl bg-blue-500 py-3 items-center justify-evenly">
-                <div class="text-center text-white text-2xl">MARCH</div>
-                <div class="text-4xl text-white text-opacity-30">2020</div>
+            <div id="year-month" class=" rounded-t-3xl bg-blue-500 py-3">
+                <div class="flex text-md items-center justify-evenly">
+                    <div id="month-button" class="border border-white border-opacity-50 rounded-lg
+                    text-center text-white text-4xl py-2 px-5">JULY</div>
+                    <div class="border border-white border-opacity-50 rounded-lg text-4xl text-blue-500 py-2 px-5 bg-white">2021</div>
+                </div>
             </div>
-            <div id="day-headings" class="grid grid-cols-7 grid-rows-1 text-center text-sm bg-blue-500 text-white py-1">
+            
+            <div id="day-headings" class="grid grid-cols-7 text-center text-sm bg-blue-500 text-white py-1">
                 <p id="sun" class="">SUN</p>
                 <p id="mon" class="">MON</p>
                 <p id="tue" class="">TUE</p>
@@ -44,46 +62,44 @@
                 <p id="fri" class="">FRI</p>
                 <p id="sat" class="">SAT</p>
             </div>
-            <div id="days" class="text-md h-full grid grid-cols-7 grid-rows-5">
-                <div class="flex justify-center items-center py-3">1</div>
-                <div class="flex justify-center items-center">2</div>
-                <div class="flex justify-center items-center">3</div>
-                <div class="flex justify-center items-center">4</div>
-                <div class="flex justify-center items-center">5</div>
-                <div class="flex justify-center items-center">6</div>
-                <div class="flex justify-center items-center">7</div>                            
-                <div class="flex justify-center items-center border-t border-gray-200">8</div>
-                <div class="flex justify-center items-center border-t border-gray-200">9</div>
-                <div class="flex justify-center items-center border-t border-gray-200">10</div>
-                <div class="flex justify-center items-center border-t border-gray-200">11</div>
-                <div class="flex justify-center items-center border-t border-gray-200">12</div>
-                <div class="flex justify-center items-center border-t border-gray-200">13</div>
-                <div class="flex justify-center items-center border-t border-gray-200">14</div>
-                <div class="flex justify-center items-center border-t border-gray-200">15</div>
-                <div class="flex justify-center items-center border-t border-gray-200">16</div>
-                <div class="flex justify-center items-center border-t border-gray-200">17</div>
-                <div class="flex justify-center items-center border-t border-gray-200">18</div>
-                <div class="flex justify-center items-center border-t border-gray-200">19</div>
-                <div class="flex justify-center items-center border-t border-gray-200">20</div>
-                <div class="flex justify-center items-center border-t border-gray-200">21</div>
-                <div class="flex justify-center items-center border-t border-gray-200">22</div>
-                <div class="flex justify-center items-center border-t border-gray-200">23</div>
-                <div class="flex justify-center items-center border-t border-gray-200">24</div>
-                <div class="flex justify-center items-center border-t border-gray-200">25</div>
-                <div class="flex justify-center items-center border-t border-gray-200">26</div>
-                <div class="flex justify-center items-center border-t border-gray-200">27</div>
-                <div class="flex justify-center items-center border-t border-gray-200">28</div>
-                <div class="flex justify-center items-center border-t border-gray-200">29</div>
-                <div class="flex justify-center items-center border-t border-gray-200">30</div>
-                <div class="flex justify-center items-center border-t border-gray-200">31</div>
-                <div class="flex justify-center items-center border-t border-gray-200"></div>
-                <div class="flex justify-center items-center border-t border-gray-200"></div>
-                <div class="flex justify-center items-center border-t border-gray-200"></div>
-                <div class="flex justify-center items-center border-t border-gray-200"></div>
+            <div id="days" class="text-md h-full grid grid-cols-7 grid-rows-5 bg-white rounded-b-3xl">
+                <div class="flex justify-center items-center"><span class="days flex justify-center items-center w-10 h-10 rounded-full"></span></div>
+                <div class="flex justify-center items-center my-1"><span class="days flex justify-center items-center w-10 h-10 rounded-full"></span></div>
+                <div class="flex justify-center items-center rounded-full"><span class="days flex justify-center items-center w-10 h-10 rounded-full"></span></div>
+                <div class="flex justify-center items-center rounded-full"><span class="days flex justify-center items-center w-10 h-10 rounded-full"></span></div>
+                <div class="flex justify-center items-center rounded-full"><span class="days flex justify-center items-center w-10 h-10 rounded-full">1</span></div>
+                <div class="flex justify-center items-center rounded-full"><span class="days flex justify-center items-center w-10 h-10 rounded-full bg-yellow-500 text-white">2</span></div>
+                <div class="flex justify-center items-center rounded-full"><span class="days flex justify-center items-center w-10 h-10 rounded-full">3</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">4</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">5</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">6</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">7</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">8</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">9</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">10</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">11</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">12</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">13</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">14</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">15</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">16</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">17</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">18</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">19</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">20</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">21</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">22</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">23</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">24</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">25</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">26</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">27</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">28</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">29</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">30</span></div>
+                <div class="flex justify-center items-center border-t border-gray-200"><span class="days flex justify-center items-center w-10 h-10 rounded-full">31</span></div>
             </div>
-          </div>
         </div>
-
         <script src="script.js" async defer></script>
     </body>
 </html>
